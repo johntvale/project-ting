@@ -19,4 +19,3 @@ class Queue:
             return self._data[index]
         else:
             raise IndexError("Invalid index")
-
