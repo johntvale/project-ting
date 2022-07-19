@@ -15,11 +15,15 @@ def process(path_file, instance):
     if not file_already_exist:
         instance.enqueue(item_to_process)
     print(item_to_process)
-    
 
 
 def remove(instance):
-    """Aqui irá sua implementação"""
+    if instance.__len__() < 1:
+        print("Não há elementos")
+    else:
+        removed = instance.dequeue()
+        path_file = removed["nome_do_arquivo"]
+        print(f"Arquivo {path_file} removido com sucesso")
 
 
 def file_metadata(instance, position):
